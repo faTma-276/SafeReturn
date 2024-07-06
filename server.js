@@ -10,7 +10,6 @@ import { dbconnection } from './databases/dbconnection.js'
 import { init } from './src/index.routes.js'
 import cors from 'cors'
 import { Server } from "socket.io";
-// import {  watchMissingChanges } from './src/modules/notifications/missingWatch.controller.js'
 import  {  watchFoundChanges } from './src/modules/notifications/foundChiWatch.controller.js'
 import { adminNotifModel } from './databases/models/adminNotifi.model.js'
 
@@ -18,7 +17,6 @@ dotenv.config()
 const app = express()
 const port = 3000
 
-// watchMissingChanges()
 watchFoundChanges()
 
 
